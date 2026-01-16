@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>国际关系人格倾向大调查！</title>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .question {
+      background: #fff;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 700px;
+    }
+    .question h3 {
+      margin: 0 0 10px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #result {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #e9f7ef;
+      border-radius: 8px;
+      border: 1px solid #d4edda;
+    }
+  </style>
+</head>
+<body>
+  <h1>国际关系人格倾向大调查！</h1>
+
+  <form id="quizForm">
+    <!-- 用循环生成会更优雅，这里手写方便直观 -->
+    <div class="question">
+      <h3>1. 当前学校有一个校运动会当志愿者可以给综测加分的活动，你优先获得了这一信息，室友并不知道。你会选择邀请室友一起参加吗？？</h3>
+      <div class="options">
+        <label><input type="radio" name="q1" value="L5"> A. 非常愿意，认为这样既可以团结室友关系，大家还都可以获得综测加分</label>
+        <label><input type="radio" name="q1" value="L3"> B. 一般愿意,看看和室友关系如何，再决定是否邀请</label>
+        <label><input type="radio" name="q1" value="L0"> C. 并不愿意，想要自己拿更高的综测分，不想带室友</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>2. 你目前吃了学校的好几家食堂都觉得不好吃，你会想要外部承包商进入学校，来提供美味的饭菜吗？</h3>
+      <div class="options">
+        <label><input type="radio" name="q2" value="L5"> A. 非常赞同,外部承包商可以增加菜的品种，增加选择</label>
+        <label><input type="radio" name="q2" value="L3"> B. 部分赞同,担心外部承包商可能会给校园安全带来一定的风险</label>
+        <label><input type="radio" name="q2" value="L0"> C. 完全不赞同,虽然学校的饭不好吃，但是至少是官方管理，有安全保障。外边的人不可靠</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>3. 身边的人或是网上对于大学宿舍关系的描述影响了你对舍友的看法，并影响了你们的相处。。</h3>
+      <div class="options">
+        <label><input type="radio" name="q3" value="C5"> A. 同意,这些说法塑造了我心中的宿舍关系</label>
+        <label><input type="radio" name="q3" value="C3"> B. 一般同意,这些想法可以作为一个参考</label>
+        <label><input type="radio" name="q3" value="C0"> C. 不同意,这些观点不会影响到我的看法</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>4. 去图书馆发现座位紧张，你会先放下书包占位，再慢慢去买咖啡。</h3>
+      <div class="options">
+        <label><input type="radio" name="q4" value="R5"> A. 非常同意,先下手为强才能确保我有位置</label>
+        <label><input type="radio" name="q4" value="R3"> B. 一般同意,我会衡量座位紧张程度，如果代价不大就果断占位</label>
+        <label><input type="radio" name="q4" value="R0"> C. 不同意,我会暂时忍耐，等到人少的时候再找机会抢占</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>5. 北大的校风一直都是自由开放的，这很大程度上还是在于同学们之间良好的个人作风与融洽的互动。</h3>
+      <div class="options">
+        <label><input type="radio" name="q5" value="C5"> A. 同意,北大的风气是由同学们的互动共同塑造的</label>
+        <label><input type="radio" name="q5" value="C3"> B. 一般同意,，同学们的互动很重要，但是北大本身固有的规则也发挥巨大作用</label>
+        <label><input type="radio" name="q5" value="C0"> C. 不同意,北大的氛围和规则决定了大家之间的相处模式，个人难以改变</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>6. 你作为一个社团负责人，面对校园对于社团管理的不合理安排，你会选择和别的社团共同合作去和学校沟通，解决这个问题吗？？</h3>
+      <div class="options">
+        <label><input type="radio" name="q6" value="L5"> A. 非常赞同,大家团结力量大，团结在一起可以更好的解决问题</label>
+        <label><input type="radio" name="q6" value="L3"> B. 部分赞同,担心社团之间存在竞争，不想和别的社团联系太多</label>
+        <label><input type="radio" name="q6" value="L0"> C. 完全不赞同,管好自己社团的事就好，目前的处境虽然不舒服，但是也可以忍受。如果去找学校沟通，枪打出头鸟怎么办</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>7. 大家对温度有分歧，你会直接调到自己舒服的温度。</h3>
+      <div class="options">
+        <label><input type="radio" name="q7" value="R5"> A. 非常同意,直接把冷气调到我觉得舒服的温度才是最有效</label>
+        <label><input type="radio" name="q7" value="R3"> B. 一般同意,如果人多反对我就暂时妥协，避免正面冲突</label>
+        <label><input type="radio" name="q7" value="R0"> C. 不同意,我会主要考虑其他人的感受</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>8. 在一个寝室里，没有寝室长，同学们都按照自己的习性生活，虽然各干各的，但是还是难以避免有矛盾冲突，你这么理解这个问题。</h3>
+      <div class="options">
+        <label><input type="radio" name="q8" value="C5"> A. 炸弹只有被理解为炸弹时才是最危险的，即使没有寝室长，室友之间的关系如何还是在于你如何看待寝室生活，由此对室友们有怎样的期待。</label>
+        <label><input type="radio" name="q8" value="C3"> B. 寝室之间即使没有寝室长，但是其内部还是存在一些固有的规则的，并不是完全混乱状态</label>
+        <label><input type="radio" name="q8" value="C0"> C. 寝室生活就是一种混乱状态，大家各行其是，矛盾斗争在所难免。</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>9. 参加活动时，你觉得比起「大家都能玩得开心」，更重要的是「自己能拿到最多奖品」。</h3>
+      <div class="options">
+        <label><input type="radio" name="q9" value="R5"> A. 非常同意,我的奖品拿愈多愈好</label>
+        <label><input type="radio" name="q9" value="R3"> B. 一般同意,如果有机会我会多拿，但必要时我还是会顾团体</label>
+        <label><input type="radio" name="q9" value="R0"> C. 不同意,我觉得大家在一起的愉快氛围最重要</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>10. 课程小组作业分配，你采取的策略是？</h3>
+      <div class="options">
+        <label><input type="radio" name="q10" value="R"> A. 抓取主动权，率先发言并组织任务分配，确保小组人员各司其职并稳定</label>
+        <label><input type="radio" name="q10" value="L"> B. 构思任务分配制度，如主动提出抽签、掷骰子等尽可能公平地完成任务分配</label>
+        <label><input type="radio" name="q10" value="C"> C.不着急确定分配任务，认为互动聊天很有必要，并且通过聊天，选择与自己观念一致的同学组队完成任务。</label>
+      </div>
+    </div>
+
+    <button type="button" onclick="calculateResult()">提交问卷</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateResult() {
+      const form = document.getElementById("quizForm");
+      const data = new FormData(form);
+      let L = 0, R = 0, C = 0;
+
+      // 处理前9题的分数
+      for (let [key, value] of data.entries()) {
+        if (key === "q10") continue; // 跳过第十题
+        const type = value.charAt(0); // L / R / C
+        const score = parseInt(value.substring(1));
+        if (type === "L") L += score;
+        if (type === "R") R += score;
+        if (type === "C") C += score;
+      }
+
+      // 第十题验证
+      let validation = data.get("q10");
+      let personality = "";
+      if (validation === "L") personality = "自由主义";
+      if (validation === "R") personality = "现实主义";
+      if (validation === "C") personality = "建构主义";
+
+      let resultText = `
+        <h2>结果统计</h2>
+        <p>自由主义（L）：${L} 分</p>
+        <p>现实主义（R）：${R} 分</p>
+        <p>建构主义（C）：${C} 分</p>
+        <h3>你的主要人格倾向：${
+          L >= R && L >= C ? "自由主义" : R >= L && R >= C ? "现实主义" : "建构主义"
+        }</h3>
+        <p>验证题目显示：你更倾向于 <strong>${personality}</strong></p>
+      `;
+      document.getElementById("result").innerHTML = resultText;
+    }
+  </script>
+</body>
+</html>
